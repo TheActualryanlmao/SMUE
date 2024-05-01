@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM: Ultimate Expansion</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            background: linear-gradient(to bottom, #f7b767, #ff8c00); /* Orange gradient background */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Text color */
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Checkerboard background pattern */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff8c00 25%, transparent 25%), linear-gradient(-45deg, #ff8c00 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ff8c00 75%), linear-gradient(-45deg, transparent 75%, #ff8c00 75%);
+            background-size: 20px 20px;
+            z-index: -1; /* Push checkerboard behind other content */
+        }
+
+        /* Download button */
+        .download-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 2px solid #000; /* Black outline */
+            border-radius: 5px;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #000; /* Black button */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content -->
+    <div class="download-container">
+        <a href="https://www.youtube.com/watch?v=Opscdp9FywA" class="download-button">Download Demo</a>
+    </div>
+
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .floating-image {
+      position: relative;
+      animation: floatUpDown 5s infinite ease-in-out;
+      width: 700px; /* adjust size as needed */
+      height: auto; /* maintain aspect ratio */
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+
+  <img src="SMUE.png" alt="Floating Image" class="floating-image">
+  
+
+    <style>
+        /* Style for social media icons */
+        .social-media {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 1000;
+        }
+        .social-media a {
+            margin-bottom: 10px;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            transition: transform 0.3s ease;
+        }
+        /* Individual styles for each social media icon */
+        .twitter {
+            background-image: url('Twitter.png');
+        }
+        .youtube {
+            background-image: url('youtube.png');
+        }
+        .discord {
+            background-image: url('Discord.png');
+        }
+        /* Hover effect */
+        .social-media a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a class="twitter" href="https://twitter.com/smue_dev?s=21" target="_blank"></a>
+        <a class="youtube" href="https://youtube.com/@SMUltimateExpansion?si=S-gai5dmvIKTvyMC" target="_blank"></a>
+        <a class="discord" href="https://discord.com/invite/Td9AXKyZmA" target="_blank"></a>
+    </div>
+
+ 
+
+    <style>
+        #muteButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audioPlayer" autoplay loop>
+        <source src="NewPorkBossa.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <img id="muteButton" src="Noteblock.png" alt="Mute Button" onclick="toggleAudio()">
+    
+    <script>
+        var audio = document.getElementById("audioPlayer");
+        var muteButton = document.getElementById("muteButton");
+        var isMuted = false;
+
+        function toggleAudio() {
+            if (isMuted) {
+                audio.play();
+                muteButton.src = "Noteblock.png";
+                isMuted = false;
+            } else {
+                audio.pause();
+                muteButton.src = "wompwompnomusic.png";
+                isMuted = true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Mario64';
+    src: url('Mario64.ttf') format('truetype');
+    /* You can also include additional font formats for cross-browser compatibility */
+    /* src: url('Mario64.woff') format('woff'), */
+    /* url('Mario64.woff2') format('woff2'), */
+    /* url('path/to/your-font.eot') format('embedded-opentype'), */
+    /* url('path/to/your-font.svg#Mario64') format('svg'); */
+}
+
+body {
+    font-family: 'Mario64';
+    /* Fallback to a system font if the custom font fails to load */
+}
